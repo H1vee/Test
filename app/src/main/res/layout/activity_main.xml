@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_beige"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header with Logo and Menu -->
+        <TextView
+            android:id="@+id/tvLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name_display"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="@string/menu_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_black" />
+
+        <!-- Military Document Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDocument"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_light_beige"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLogo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <!-- Document Title -->
+                <TextView
+                    android:id="@+id/tvDocumentTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/military_document"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    android:lineSpacingExtra="2dp"
+                    app:layout_constraintEnd_toStartOf="@id/ivEmblem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Ukrainian Emblem -->
+                <ImageView
+                    android:id="@+id/ivEmblem"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_emblem"
+                    android:contentDescription="@string/emblem_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Birth Date Label -->
+                <TextView
+                    android:id="@+id/tvBirthLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/birth_date_label"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDocumentTitle" />
+
+                <!-- Birth Date Value -->
+                <TextView
+                    android:id="@+id/tvBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/birth_date_value"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBirthLabel" />
+
+                <!-- Booking Until Label -->
+                <TextView
+                    android:id="@+id/tvBookingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/booking_until_label"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBirthDate" />
+
+                <!-- Booking Until Value -->
+                <TextView
+                    android:id="@+id/tvBookingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/booking_date_value"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookingLabel" />
+
+                <!-- Status Bar -->
+                <LinearLayout
+                    android:id="@+id/layoutStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/status_brown"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookingDate">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/on_record"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="•"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/document_updated"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Person Info Section -->
+                <TextView
+                    android:id="@+id/tvPersonCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/military_liable"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutStatus" />
+
+                <TextView
+                    android:id="@+id/tvPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/person_name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    android:lineSpacingExtra="2dp"
+                    app:layout_constraintEnd_toStartOf="@id/btnMenu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPersonCategory" />
+
+                <!-- Three Dots Menu Button -->
+                <ImageView
+                    android:id="@+id/btnMenu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_orange"
+                    android:contentDescription="@string/more_options"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvPersonName"
+                    app:tint="@color/white" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom Button -->
+        <Button
+            android:id="@+id/btnQR"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:text="@string/qr_button_text"
+            android:textColor="@color/button_text_disabled"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardDocument" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

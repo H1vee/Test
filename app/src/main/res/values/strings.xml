@@ -1,3 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Reserve</string>
+    <string name="app_name_display">Резерв+</string>
+
+    <!-- Menu -->
+    <string name="menu_description">Меню</string>
+    <string name="more_options">Додаткові опції</string>
+
+    <!-- Document Info -->
+    <string name="military_document">Військово-\nобліковий\nдокумент</string>
+    <string name="emblem_description">Герб України</string>
+
+    <!-- Personal Data -->
+    <string name="birth_date_label">Дата народження:</string>
+    <string name="birth_date_value">07.03.1990</string>
+    <string name="booking_until_label">Бронювання до:</string>
+    <string name="booking_date_value">27.09.2026</string>
+
+    <!-- Status -->
+    <string name="on_record">На обліку</string>
+    <string name="document_updated">Документ оновлено о 18:42</string>
+
+    <!-- Person Info -->
+    <string name="military_liable">Військовозобов\'язаний</string>
+    <string name="person_name">Лединський\nЮрій\nОлександрович</string>
+
+    <!-- Button -->
+    <string name="qr_button_text">📷  Сканувати QR-код</string>
 </resources>
