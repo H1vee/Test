@@ -21,9 +21,10 @@
     <string name="birth_date_value">21.11.2004</string>
 
     <!-- Status Bar -->
-    <string name="updated_at">злено о 19:36 | 12.11.2025</string>
+    <string name="marquee_text">Документ оновлено о 19:36 | 12.11.2025  •  На обліку</string>
+    <string name="updated_at">Документ оновлено о 19:36 | 12.11.2025</string>
     <string name="on_record">На обліку</string>
-    <string name="document_type">Докум</string>
+    <string name="document_type">Документ</string>
 
     <!-- Person Info -->
     <string name="military_liable">Призовник</string>

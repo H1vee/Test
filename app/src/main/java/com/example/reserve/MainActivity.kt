@@ -1,13 +1,8 @@
 package com.example.reserve
 
-import android.graphics.Color
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.ForegroundColorSpan
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,22 +10,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setupLogo()
+        setupMarquee()
     }
 
     private fun setupLogo() {
         val tvLogo = findViewById<TextView>(R.id.tvLogo)
-        val logoText = "Резерв+"
-        val spannable = SpannableString(logoText)
+        val tvLogoPlus = findViewById<TextView>(R.id.tvLogoPlus)
 
-        // Зробити "+" оранжевим
-        val orangeColor = ContextCompat.getColor(this, R.color.orange_bright)
-        spannable.setSpan(
-            ForegroundColorSpan(orangeColor),
-            6, // позиція "+"
-            7, // кінець "+"
-            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
+        // Встановлюємо текст
+        tvLogo.text = "Резерв"
+        tvLogoPlus.text = "+"
+    }
 
-        tvLogo.text = spannable
+    private fun setupMarquee() {
+        val tvMarquee = findViewById<TextView>(R.id.tvMarquee)
+        tvMarquee.isSelected = true
     }
 }
