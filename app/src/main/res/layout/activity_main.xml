@@ -1,113 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_beige"
-    android:fillViewport="true">
+    android:background="#e1decb">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Header with Logo - Резерв -->
-        <TextView
-            android:id="@+id/tvLogo"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Резерв"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_black"
-            android:fontFamily="sans-serif-medium"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="16dp">
 
-        <!-- Plus sign - elevated and orange -->
-        <TextView
-            android:id="@+id/tvLogoPlus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/orange_bright"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginStart="2dp"
-            app:layout_constraintStart_toEndOf="@id/tvLogo"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <!-- Scan Document Button -->
-        <LinearLayout
-            android:id="@+id/btnScanDocument"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
+            <!-- Header with Logo - Резерв -->
             <TextView
+                android:id="@+id/tvLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/scan_document"
+                android:text="Резерв"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 android:textColor="@color/text_black"
-                android:textSize="11sp"
-                android:gravity="end"
-                android:lineSpacingMultiplier="0.9"
-                android:layout_marginEnd="6dp" />
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <FrameLayout
-                android:layout_width="24dp"
-                android:layout_height="24dp">
+            <!-- Plus sign - elevated and orange -->
+            <TextView
+                android:id="@+id/tvLogoPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange_bright"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@id/tvLogo"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_qr_code"
-                    android:contentDescription="@string/scan_document"
-                    app:tint="@color/text_black" />
+            <!-- Scan Document Button -->
+            <LinearLayout
+                android:id="@+id/btnScanDocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="QR"
+                    android:text="@string/scan_document"
                     android:textColor="@color/text_black"
-                    android:textSize="7sp"
-                    android:textStyle="bold"
-                    android:includeFontPadding="false" />
+                    android:textSize="11sp"
+                    android:gravity="end"
+                    android:lineSpacingMultiplier="0.9"
+                    android:layout_marginEnd="6dp" />
 
-            </FrameLayout>
-        </LinearLayout>
+                <FrameLayout
+                    android:layout_width="24dp"
+                    android:layout_height="24dp">
 
-        <!-- Military Document Card -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardDocument"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
-            app:cardBackgroundColor="@color/card_light_beige"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLogo">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_qr_code"
+                        android:contentDescription="@string/scan_document"
+                        app:tint="@color/text_black" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="QR"
+                        android:textColor="@color/text_black"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Military Document Card -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+                android:id="@+id/cardDocument"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="20dp">
+                android:layout_marginTop="24dp"
+                android:background="@drawable/card_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLogo">
 
                 <!-- Document Title -->
                 <TextView
                     android:id="@+id/tvDocumentTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
                     android:lineSpacingExtra="0dp"
                     android:lineSpacingMultiplier="1.1"
                     android:text="@string/military_document"
@@ -124,6 +132,8 @@
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
                     android:contentDescription="@string/emblem_description"
                     android:src="@drawable/ic_emblem"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -134,6 +144,7 @@
                     android:id="@+id/layoutStatusCheck"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
@@ -161,6 +172,7 @@
                     android:id="@+id/tvBirthLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/birth_date_label"
                     android:textColor="@color/text_gray"
@@ -173,6 +185,7 @@
                     android:id="@+id/tvBirthDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/birth_date_value"
                     android:textColor="@color/text_black"
@@ -202,6 +215,7 @@
                         android:text="@string/marquee_text"
                         android:textColor="@color/white"
                         android:textSize="12sp"
+                        android:textStyle="bold"
                         android:singleLine="true"
                         android:ellipsize="marquee"
                         android:marqueeRepeatLimit="marquee_forever"
@@ -216,6 +230,7 @@
                     android:id="@+id/tvPersonCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
                     android:text="@string/military_liable"
                     android:textColor="@color/text_gray"
@@ -227,7 +242,9 @@
                     android:id="@+id/tvPersonName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
                     android:lineSpacingExtra="0dp"
                     android:lineSpacingMultiplier="1.05"
                     android:text="@string/person_name"
@@ -244,37 +261,121 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/circle_orange"
                     android:contentDescription="@string/more_options"
                     android:padding="14dp"
                     android:src="@drawable/ic_more"
                     app:layout_constraintBottom_toBottomOf="@id/tvPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/tvPersonName"
                     app:tint="@color/black" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Bottom Navigation Placeholder -->
+    </ScrollView>
+
+    <!-- Bottom Navigation Footer -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:background="#f8f8f8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Vacancies -->
         <LinearLayout
-            android:id="@+id/bottomNav"
+            android:id="@+id/btnVacancies"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical"
             android:gravity="center"
-            android:paddingVertical="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardDocument">
+            android:padding="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
 
-            <!-- Bottom navigation items will go here -->
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_vacancies"
+                android:contentDescription="@string/vacancies" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/vacancies"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Document (Active) -->
+        <LinearLayout
+            android:id="@+id/btnDocument"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
 
-</ScrollView>
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_document"
+                android:contentDescription="@string/document" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/document"
+                android:textColor="@color/orange_bright"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Menu -->
+        <LinearLayout
+            android:id="@+id/btnMenuNav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="@string/menu"
+                app:tint="@color/text_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/menu"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
