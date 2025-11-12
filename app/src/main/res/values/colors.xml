@@ -11,6 +11,7 @@
     <!-- Accent Colors -->
     <color name="status_brown">#8B6F47</color>
     <color name="orange">#FF9500</color>
+    <color name="orange_bright">#FF8C00</color>
     <color name="button_disabled">#D4C5A9</color>
     <color name="button_text_disabled">#9E9E9E</color>
 

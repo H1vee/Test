@@ -6,25 +6,31 @@
     <!-- Menu -->
     <string name="menu_description">Меню</string>
     <string name="more_options">Додаткові опції</string>
+    <string name="scan_document">Сканувати\nдокумент</string>
 
     <!-- Document Info -->
     <string name="military_document">Військово-\nобліковий\nдокумент</string>
     <string name="emblem_description">Герб України</string>
 
+    <!-- Status -->
+    <string name="data_clarified">Дані уточнено вчасно</string>
+    <string name="status_check">Статус перевірено</string>
+
     <!-- Personal Data -->
     <string name="birth_date_label">Дата народження:</string>
-    <string name="birth_date_value">07.03.1990</string>
-    <string name="booking_until_label">Бронювання до:</string>
-    <string name="booking_date_value">27.09.2026</string>
+    <string name="birth_date_value">21.11.2004</string>
 
-    <!-- Status -->
+    <!-- Status Bar -->
+    <string name="updated_at">злено о 19:36 | 12.11.2025</string>
     <string name="on_record">На обліку</string>
-    <string name="document_updated">Документ оновлено о 18:42</string>
+    <string name="document_type">Докум</string>
 
     <!-- Person Info -->
-    <string name="military_liable">Військовозобов\'язаний</string>
-    <string name="person_name">Лединський\nЮрій\nОлександрович</string>
+    <string name="military_liable">Призовник</string>
+    <string name="person_name">ЛЕДИНСЬКИЙ\nАртем\nОлександрович</string>
 
-    <!-- Button -->
-    <string name="qr_button_text">📷  Сканувати QR-код</string>
+    <!-- Bottom Navigation -->
+    <string name="vacancies">Вакансії</string>
+    <string name="document">Документ</string>
+    <string name="menu">Меню</string>
 </resources>
