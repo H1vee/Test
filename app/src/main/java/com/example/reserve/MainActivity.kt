@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         val tvLogo = findViewById<TextView>(R.id.tvLogo)
         val tvLogoPlus = findViewById<TextView>(R.id.tvLogoPlus)
 
-        // Встановлюємо текст
         tvLogo.text = "Резерв"
         tvLogoPlus.text = "+"
     }
