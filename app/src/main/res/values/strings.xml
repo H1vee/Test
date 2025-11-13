@@ -21,7 +21,7 @@
     <string name="birth_date_value">21.11.2004</string>
 
     <!-- Status Bar -->
-    <string name="marquee_text">Документ оновлено о 19:36 | 12.11.2025  •  На обліку</string>
+    <string name="marquee_text">На обліку •  Документ оновлено о 19:36 | 12.11.2025</string>
     <string name="updated_at">Документ оновлено о 19:36 | 12.11.2025</string>
     <string name="on_record">На обліку</string>
     <string name="document_type">Документ</string>
