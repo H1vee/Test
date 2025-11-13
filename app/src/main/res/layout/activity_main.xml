@@ -202,19 +202,49 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvBirthLabel" />
 
+                <!-- Deferment Label -->
+                <TextView
+                    android:id="@+id/tvDefermentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/deferment_label"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBirthDate" />
+
+                <!-- Deferment Value -->
+                <TextView
+                    android:id="@+id/tvDefermentValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/deferment_value"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDefermentLabel" />
+
                 <!-- Status Bar -->
                 <LinearLayout
                     android:id="@+id/layoutStatus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="230dp"
+                    android:layout_marginTop="180dp"
                     android:background="#6b4b1a"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvBirthDate">
+                    app:layout_constraintTop_toBottomOf="@id/tvDefermentValue">
 
                     <TextView
                         android:id="@+id/tvMarquee"
