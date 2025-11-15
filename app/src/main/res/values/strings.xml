@@ -25,10 +25,20 @@
     <string name="deferment_value">завершення мобілізації</string>
 
     <!-- Status Bar -->
-    <string name="marquee_text">На обліку •  Документ оновлено о 19:36 | 12.11.2025          На обліку •  Документ оновлено о 19:36 | 12.11.2025          На обліку •  Документ оновлено о 19:36 | 12.11.2025                    На обліку •  Документ оновлено о 19:36 | 12.11.2025          На обліку •  Документ оновлено о 19:36 | 12.11.2025          На обліку •  Документ оновлено о 19:36 | 12.11.2025          На обліку •  Документ оновлено о 19:36 | 12.11.2025</string>
-    <string name="updated_at">Документ оновлено о 19:36 | 12.11.2025</string>
+    <string name="marquee_text">На обліку  •  Документ оновлено     </string>
     <string name="on_record">На обліку</string>
     <string name="document_type">Документ</string>
+
+    <!-- Menu Dialog -->
+    <string name="menu_title">Меню документа</string>
+    <string name="update_document">Оновити документ</string>
+    <string name="cancel">Скасувати</string>
+    <string name="document_updated_toast">Документ оновлено</string>
+
+    <!-- Update Dialog -->
+    <string name="update_dialog_message">Поки генеруватиметься нова версія документу, деякі послуги можуть бути недоступні</string>
+    <string name="update">Оновити</string>
+    <string name="cancel_dialog">Скасувати</string>
 
     <!-- Person Info -->
     <string name="military_liable">Призовник</string>
