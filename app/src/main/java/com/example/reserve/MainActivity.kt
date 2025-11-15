@@ -73,10 +73,7 @@ class MainActivity : AppCompatActivity() {
         updateDialog?.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
 
-            setLayout(
-                (cardDocument.width * 0.85).toInt(),
-                android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-            )
+            setGravity(android.view.Gravity.CENTER)
         }
 
         val btnUpdate = dialogView.findViewById<View>(R.id.btnUpdate)
@@ -92,11 +89,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         updateDialog?.show()
+        updateDialog?.window?.apply {
+            setLayout(
+                cardDocument.width,
+                (cardDocument.height * 0.75).toInt()
+            )
 
-        updateDialog?.window?.setLayout(
-            (cardDocument.width * 0.85).toInt(),
-            android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-        )
+            // Опускаємо діалог вниз
+            val params = attributes
+            params.y = 150 // Зміщення вниз на 250 пікселів
+            attributes = params
+        }
     }
 
     private fun simulateDocumentGeneration() {
@@ -108,15 +111,12 @@ class MainActivity : AppCompatActivity() {
     private fun updateDocument() {
         val currentTime = System.currentTimeMillis()
 
-        // Зберігаємо час оновлення
         sharedPreferences.edit()
             .putLong(KEY_LAST_UPDATE, currentTime)
             .apply()
 
-        // Оновлюємо текст на екрані
         updateMarqueeText()
 
-        // Показуємо повідомлення про успішне оновлення
         android.widget.Toast.makeText(
             this,
             R.string.document_updated_toast,
