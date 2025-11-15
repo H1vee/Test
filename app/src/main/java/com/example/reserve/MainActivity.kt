@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private var bottomSheetDialog: BottomSheetDialog? = null
     private var updateDialog: AlertDialog? = null
+    private var documentFullBottomSheet: BottomSheetDialog? = null
 
     companion object {
         private const val PREFS_NAME = "ReservePrefs"
@@ -52,13 +53,47 @@ class MainActivity : AppCompatActivity() {
         val view = layoutInflater.inflate(R.layout.bottom_sheet_menu, null)
         bottomSheetDialog?.setContentView(view)
 
+        val btnViewDocument = view.findViewById<View>(R.id.btnViewDocument)
         val btnRefreshDocument = view.findViewById<View>(R.id.btnRefreshDocument)
+
+        btnViewDocument.setOnClickListener {
+            bottomSheetDialog?.dismiss()
+            showFullDocumentBottomSheet()
+        }
+
         btnRefreshDocument.setOnClickListener {
             bottomSheetDialog?.dismiss()
             showUpdateDialog()
         }
 
         bottomSheetDialog?.show()
+    }
+
+    private fun showFullDocumentBottomSheet() {
+        documentFullBottomSheet = BottomSheetDialog(this)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_document_full, null)
+        documentFullBottomSheet?.setContentView(view)
+
+        // Ініціалізуємо бігучий рядок
+        val tvMarqueeFull = view.findViewById<TextView>(R.id.tvMarqueeFull)
+        tvMarqueeFull.ellipsize = TextUtils.TruncateAt.MARQUEE
+        tvMarqueeFull.marqueeRepeatLimit = -1
+        tvMarqueeFull.isSingleLine = true
+        tvMarqueeFull.isSelected = true
+
+        // Оновлюємо текст з актуальною датою
+        val lastUpdateTime = sharedPreferences.getLong(KEY_LAST_UPDATE, System.currentTimeMillis())
+        val dateFormat = SimpleDateFormat("HH:mm | dd.MM.yyyy", Locale("uk"))
+        val formattedDateTime = dateFormat.format(Date(lastUpdateTime))
+        val baseText = "На обліку  •  Документ оновлено о $formattedDateTime     "
+        val marqueeText = buildString {
+            repeat(7) {
+                append(baseText)
+            }
+        }
+        tvMarqueeFull.text = marqueeText
+
+        documentFullBottomSheet?.show()
     }
 
     private fun showUpdateDialog() {
@@ -149,5 +184,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         bottomSheetDialog?.dismiss()
         updateDialog?.dismiss()
+        documentFullBottomSheet?.dismiss()
     }
 }

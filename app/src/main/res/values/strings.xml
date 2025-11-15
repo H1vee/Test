@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Reserve</string>
+    <string name="app_name">Резерв+</string>
     <string name="app_name_display">Резерв+</string>
 
     <!-- Menu -->
@@ -15,35 +15,68 @@
     <!-- Status -->
     <string name="data_clarified">Дані уточнено вчасно</string>
     <string name="status_check">Статус перевірено</string>
+    <string name="on_record">На обліку</string>
 
     <!-- Personal Data -->
+    <string name="person_category">На обліку</string>
     <string name="birth_date_label">Дата народження:</string>
     <string name="birth_date_value">21.11.2004</string>
+    <string name="rnokpp_label">РНОКПП:</string>
+    <string name="rnokpp_value">3273320774</string>
 
     <!-- Deferment -->
     <string name="deferment_label">Відстрочка до:</string>
-    <string name="deferment_value">завершення мобілізації</string>
+    <string name="deferment_value">завершення\nмобілізації</string>
+    <string name="deferment_value_full">завершення мобілізації</string>
+    <string name="deferment_type_label">Тип відстрочки:</string>
+    <string name="deferment_type_value">п.2 ч.1 ст.23</string>
 
-    <!-- Status Bar -->
+    <!-- Disability Info -->
+    <string name="disability_group_label">Група інвалідності:</string>
+    <string name="disability_group_value">інвалідність 2ої групи</string>
+    <string name="disability_reason_label">Причина:</string>
+    <string name="disability_reason_value">Внаслідок загального захворювання</string>
+    <string name="disability_valid_until_label">Діє до:</string>
+    <string name="disability_valid_until_value">01.08.2027</string>
+
+    <!-- TCK Info -->
+    <string name="tck_label">ТЦК та СП:</string>
+    <string name="tck_value">Чернівецький міський територіальний \nцентр комплектування та соціальної \nпідтримки</string>
+    <string name="rank_label">Звання:</string>
+    <string name="rank_value">Солдат</string>
+    <string name="vos_label">ВОС:</string>
+    <string name="vos_value">100915</string>
+    <string name="category_label">Категорія обліку:</string>
+    <string name="category_value">Військовозобов\'язаний</string>
+    <string name="category_speciality">Стрілецькі,Стрілець</string>
+    <string name="oberig_number_label">Номер в реєстрі Оберіг:</string>
+    <string name="oberig_number_value">1108202334746036000049</string>
+
+    <string name="phone_label">Телефон:</string>
+    <string name="phone_value">+380 50 241 4797</string>
+    <string name="email_label">Email:</string>
+    <string name="email_value">trifanenkovasyl@gmail.com</string>
+    <string name="address_label">Адреса проживання:</string>
+    <string name="address_value">Україна, Чернівецька, Чернівці, Трепка Владислава, б. 4, кв. 13</string>
+
+    <string name="data_update_date_label">Дата уточнення даних:</string>
+    <string name="data_update_date_value">27.06.2024</string>
+
     <string name="marquee_text">На обліку  •  Документ оновлено     </string>
-    <string name="on_record">На обліку</string>
     <string name="document_type">Документ</string>
 
-    <!-- Menu Dialog -->
     <string name="menu_title">Меню документа</string>
     <string name="update_document">Оновити документ</string>
     <string name="cancel">Скасувати</string>
     <string name="document_updated_toast">Документ оновлено</string>
 
-    <!-- Update Dialog -->
     <string name="update_dialog_message">Поки генеруватиметься нова версія документу, деякі послуги можуть бути недоступні</string>
     <string name="update">Оновити</string>
     <string name="cancel_dialog">Скасувати</string>
 
-    <!-- Person Info -->
-    <string name="military_liable">Призовник</string>
-    <string name="person_name">ЛЕДИНСЬКИЙ\nАртем\nОлександрович</string>
 
+    <string name="person_name">ЛЕДИНСЬКИЙ\nАртем\nОлександрович</string>
+    <string name="person_name_doc">ЛЕДИНСЬКИЙ Артем\nОлександрович</string>
     <!-- Bottom Navigation -->
     <string name="vacancies">Вакансії</string>
     <string name="document">Документ</string>
