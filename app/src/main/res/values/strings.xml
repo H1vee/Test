@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Резерв+</string>
     <string name="app_name_display">Резерв+</string>
-
+    <string name="app_name_display_activity">Міністерство\nоборони\nУкраїни</string>
     <!-- Menu -->
     <string name="menu_description">Меню</string>
     <string name="more_options">Додаткові опції</string>
@@ -53,11 +53,11 @@
     <string name="oberig_number_value">1108202334746036000049</string>
 
     <string name="phone_label">Телефон:</string>
-    <string name="phone_value">+380 50 241 4797</string>
+    <string name="phone_value">+380 11 111 1111</string>
     <string name="email_label">Email:</string>
-    <string name="email_value">trifanenkovasyl@gmail.com</string>
+    <string name="email_value">ailedinskyi@gmail.com</string>
     <string name="address_label">Адреса проживання:</string>
-    <string name="address_value">Україна, Чернівецька, Чернівці, Трепка Владислава, б. 4, кв. 13</string>
+    <string name="address_value">FFFFFFFFF</string>
 
     <string name="data_update_date_label">Дата уточнення даних:</string>
     <string name="data_update_date_value">27.06.2024</string>
